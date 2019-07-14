@@ -1,10 +1,26 @@
 # Covert-Channel
-Installation
+## Installation
+### Victim Box
+
 1. On Ubuntu 18.04, apt install Python 3.6 and python-pip3
-2. Use pip3 to install flask, opencv, bitstring, and numpy
+    1. sudo apt install python3.6 python-pip3
+2. Use pip3 to install opencv, bitstring, and numpy
+    1. sudo pip3 install opencv-python bitstring numpy
 3. Ensure the global variables in CovertClient.py identify the CovertServer IP address and the paths for the data file to hide, the image to hide it in, and the path to write the new image containing the hidden data to.
-4. Ensure the global variables in CovertServer.py identify the path to write the exfiltrated image and extracted data to.
-5. Run CovertServer.py on own box.
+
+
+### Personal Box
+
+1. On Ubuntu 18.04, apt install Python 3.6 and python-pip3
+    1. sudo apt install python3.6 python-pip3
+2. Use pip3 to install flask, opencv, bitstring, and numpy
+    1. sudo pip3 install flask opencv-python bitstring numpy
+3. Ensure the global variables in CovertServer.py identify the path to write the exfiltrated image and extracted data to.
+
+
+## Exfiltrate File
+1. Run CovertServer.py on personal box.
     1. export FLASK_APP=CovertServer.py
     2. run flask --host=0.0.0.0
-6. Run CovertClient.py on victim box to exfiltrate data to CovertServer.
+2. Run CovertClient.py on victim box to exfiltrate data to CovertServer.
+    1. ./CovertServer.py
