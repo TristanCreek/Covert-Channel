@@ -35,4 +35,4 @@ I only guarantee this covert channel for 3840 x 2160 PNG images. Other sizes of 
     1. ./CovertServer.py
 
 ## Credits
-Developed by me, @NickBratsch, and an anonymous man of many great capabilties.
+Developed by me, @NickBratsch, and an anonymous man of great capabilties.
