@@ -1,4 +1,10 @@
 # Covert-Channel
+## About
+Covert communication channel developed to exfiltrate data via an HTTP POST request that contains a 4K PNG (3840 x 2160 pixels) data payload. The covert client stores secret data to exfiltrate in the two least significant bits of each color component (red, green, and blue) of each pixel in an image. This provides a maximum secret data payload of 5.93 MB per image.
+
+Testing with the client and server on the same box yielded a max throughput of 12.48 MB/s. This requires the user to smartly leverage the available secret data storage within the image because the covert client does NOT split data larger than 5.93 MB into multiple images. The covert client implements a hard limit at 5.93 MB per file and simply fails if the data to exfiltrate exceeds that limit.
+
+
 ## Installation
 ### Victim Box
 
