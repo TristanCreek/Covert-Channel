@@ -33,3 +33,6 @@ I only guarantee this covert channel for 3840 x 2160 PNG images. Other sizes of 
     2. run flask --host=0.0.0.0
 2. Run CovertClient.py on victim box to exfiltrate data to CovertServer.
     1. ./CovertServer.py
+
+## Credits
+Developed by me, @NickBratsch, and an anonymous man of many great capabilties.
