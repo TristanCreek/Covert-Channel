@@ -4,6 +4,9 @@ Covert communication channel developed to exfiltrate data via an HTTP POST reque
 
 Testing with the client and server on the same box yielded a max throughput of 12.48 MB/s. This requires the user to smartly leverage the available secret data storage within the image because the covert client does NOT split data larger than 5.93 MB into multiple images. The covert client implements a hard limit at 5.93 MB per file and simply fails if the data to exfiltrate exceeds that limit.
 
+We provide data.txt and image.png to test this covert channel. The covert client hides data.txt insides image.png by default given both files exist in the same directory as CovertClient.py when ran. The user can change the file names at the top of CovertClient.py to use custom payload files.
+
+I only guarantee this covert channel for 3840 x 2160 PNG images. Other sizes of lossless image formats should work, but I make no guarantees. For this covert channel to work, you MUST use a lossless format image such as PNG. Lossy image formats like JPG fail to maintain the integrity of the secret data.
 
 ## Installation
 ### Victim Box
